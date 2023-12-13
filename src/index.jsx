@@ -1,4 +1,4 @@
 import JsonEditorWrapper from "./JsonEditorWrapper";
-import JsonEditorField from "./JsonEditorField";
+import registerJsonEditorField from "./JsonEditorField";
 
-export { JsonEditorWrapper, JsonEditorField };
+export { JsonEditorWrapper, registerJsonEditorField };
