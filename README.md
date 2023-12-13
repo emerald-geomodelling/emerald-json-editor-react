@@ -44,7 +44,11 @@ export const importFile = (file) => {
 The onValidationStatusChange prop is an optional function that is used to update local states, for example:
 
 ```javascript
+const [isDataValid, setIsDataValid] = useState(false);
+
 const onValidationStatusChange = (status) => {
   setIsDataValid(status);
 };
+
+<JsonEditorWrapper onValidationStatusChange={onValidationStatusChange}>
 ```
