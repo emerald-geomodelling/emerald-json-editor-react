@@ -1,3 +1,3 @@
 # npm-json-editor-wrapper
 
-This is a wrapper component built on top of json editor and react.
+Wrapper around [json-editor](https://github.com/json-editor/json-editor)https://github.com/json-editor/json-editor and react.
