@@ -2,13 +2,13 @@
 
 Wrapper around [json-editor](https://github.com/json-editor/json-editor) and react.
 
-### Install
+## Install
 
 ```
 npm install
 ```
 
-### Requirements
+## Requirements
 
 Json Editor with npm:
 
@@ -24,11 +24,11 @@ or Json Editor with CDN:
 
 Visit [json-editor documentation](https://github.com/json-editor/json-editor) for newest doumentation on the package.
 
-### Usage and options
+## Usage and options
 
 The importFile prop is an optional function for file upload handling. This is an example of the function using axios:
 
-```
+```javascript
 export const importFile = (file) => {
   const formData = new FormData();
   formData.append("file", file);
@@ -43,8 +43,8 @@ export const importFile = (file) => {
 
 The onValidationStatusChange prop is an optional function that is used to update local states, for example:
 
-```
+```javascript
 const onValidationStatusChange = (status) => {
-    setIsDataValid(status);
-  };
+  setIsDataValid(status);
+};
 ```
