@@ -31,8 +31,6 @@ import {
 
 ### Optional
 
-To import the
-
 The importFile prop is an optional function for file upload handling. This is an example of the function using axios:
 
 ```javascript
