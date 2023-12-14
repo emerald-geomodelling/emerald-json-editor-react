@@ -1,5 +1,5 @@
 {
-  "name": "npm-json-editor-wrapper",
+  "name": "emerald-json-editor-react",
   "version": "1.0.0",
   "description": "This is a wrapper component built on top of json editor and react.",
   "main": "dist/index.js",
@@ -11,9 +11,11 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/emerald-geomodelling/npm-json-editor-wrapper"
+    "url": "https://github.com/emerald-geomodelling/emerald-json-editor-react"
   },
-  "keywords": [],
+  "keywords": [
+    "json-editor"
+  ],
   "author": "redhog, martineho",
   "license": "MIT",
   "dependencies": {
