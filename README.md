@@ -18,7 +18,20 @@ Json Editor with CDN:
 
 Visit [json-editor documentation](https://github.com/json-editor/json-editor) for newest doumentation on the package.
 
-## Usage and options
+## Usage
+
+### Initialize
+
+```javascript
+import {
+  JsonEditorWrapper,
+  registerJsonEditorField,
+} from "emerald-json-editor-react";
+```
+
+### Optional
+
+To import the
 
 The importFile prop is an optional function for file upload handling. This is an example of the function using axios:
 
