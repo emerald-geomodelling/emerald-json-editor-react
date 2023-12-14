@@ -10,13 +10,7 @@ npm install
 
 ## Requirements
 
-Json Editor with npm:
-
-```
-npm install @json-editor/json-editor
-```
-
-or Json Editor with CDN:
+Json Editor with CDN:
 
 ```
 <script src="https://cdn.jsdelivr.net/npm/@json-editor/json-editor@latest/dist/jsoneditor.min.js"></script>

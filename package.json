@@ -1,7 +1,7 @@
 {
   "name": "npm-json-editor-wrapper",
   "version": "1.0.0",
-  "description": "This is a wrapper component built on top of json editor.",
+  "description": "This is a wrapper component built on top of json editor and react.",
   "main": "dist/index.js",
   "scripts": {
     "build": "npx babel src --out-dir dist --copy-files"
@@ -15,7 +15,7 @@
   },
   "keywords": [],
   "author": "redhog, martineho",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
