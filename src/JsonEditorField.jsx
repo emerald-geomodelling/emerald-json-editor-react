@@ -1,5 +1,5 @@
 import React from "react";
-import JSONEditor from "json-editor";
+import { JSONEditor } from "json-editor";
 
 export const JsonEditorField = (Component) => {
   class editorField extends JSONEditor.AbstractEditor {

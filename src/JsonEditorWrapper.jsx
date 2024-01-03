@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
-import JSONEditor from "json-editor";
+import { JSONEditor } from "json-editor";
 import {} from "./JsonEditorFileUpload";
 
 const JsonEditorWrapper = (props) => {

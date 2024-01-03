@@ -1,4 +1,4 @@
-import JSONEditor from "json-editor";
+import { JSONEditor } from "json-editor";
 
 class UploadField extends JSONEditor.defaults.editors.upload {
   constructor(options, defaults) {
