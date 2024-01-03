@@ -1,4 +1,6 @@
-class UploadField extends window.JSONEditor.defaults.editors.upload {
+import JSONEditor from "json-editor";
+
+class UploadField extends JSONEditor.defaults.editors.upload {
   constructor(options, defaults) {
     super(
       {
@@ -22,9 +24,9 @@ class UploadField extends window.JSONEditor.defaults.editors.upload {
 
 var name = crypto.randomUUID();
 
-window.JSONEditor.defaults.resolvers.unshift((schema) => {
+JSONEditor.defaults.resolvers.unshift((schema) => {
   if (schema.format !== "url") return undefined;
   if (schema.options?.upload?.upload_handler !== undefined) return undefined;
   return name;
 });
-window.JSONEditor.defaults.editors[name] = UploadField;
+JSONEditor.defaults.editors[name] = UploadField;

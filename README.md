@@ -1,11 +1,11 @@
-# npm-json-editor-wrapper
+# emerald-json-editor-react
 
 Wrapper around [json-editor](https://github.com/json-editor/json-editor) and react.
 
 ## Install
 
 ```
-npm install
+npm install emerald-json-editor-react
 ```
 
 ## Requirements

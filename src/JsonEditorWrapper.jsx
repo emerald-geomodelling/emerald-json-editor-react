@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
+import JSONEditor from "json-editor";
 import {} from "./JsonEditorFileUpload";
 
 const JsonEditorWrapper = (props) => {
@@ -36,7 +37,7 @@ const JsonEditorWrapper = (props) => {
     const editorNode = document.createElement("div");
     containerRef.current.appendChild(editorNode);
 
-    window.JSONEditor.defaults.callbacks.upload = {
+    JSONEditor.defaults.callbacks.upload = {
       defaultUploadHandler: function (jseditor, type, file, cbs) {
         if (!importFile) {
           return;
@@ -85,7 +86,7 @@ const JsonEditorWrapper = (props) => {
       },
     };
 
-    const editor = new window.JSONEditor(editorNode, {
+    const editor = new JSONEditor(editorNode, {
       schema: schema,
       startval: data,
       ...props,

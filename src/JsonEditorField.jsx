@@ -1,7 +1,8 @@
 import React from "react";
+import JSONEditor from "json-editor";
 
 export const JsonEditorField = (Component) => {
-  class editorField extends window.JSONEditor.AbstractEditor {
+  class editorField extends JSONEditor.AbstractEditor {
     setValue(value, initial) {
       if (this.getValue() === value) return;
 
@@ -115,10 +116,10 @@ export const JsonEditorField = (Component) => {
 const registerJsonEditorField = (resolver, Component, name) => {
   name = name || crypto.randomUUID();
 
-  window.JSONEditor.defaults.resolvers.unshift((schema) => {
+  JSONEditor.defaults.resolvers.unshift((schema) => {
     if (resolver(schema)) return name;
   });
-  window.JSONEditor.defaults.editors[name] = JsonEditorField(Component);
+  JSONEditor.defaults.editors[name] = JsonEditorField(Component);
 };
 
 export default registerJsonEditorField;
