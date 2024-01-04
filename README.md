@@ -20,6 +20,8 @@ Visit [json-editor documentation](https://github.com/json-editor/json-editor) fo
 
 ## Usage
 
+Example project: https://github.com/emerald-geomodelling/emerald-json-editor-react-example
+
 ### Initialize
 
 ```javascript
