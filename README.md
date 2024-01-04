@@ -1,22 +1,12 @@
 # emerald-json-editor-react
 
-Wrapper around [json-editor](https://github.com/json-editor/json-editor) and react.
+Wrapper around [json-editor](https://github.com/json-editor/json-editor) and react. NB! Does currently not work with next.js projects.
 
 ## Install
 
 ```
 npm install emerald-json-editor-react
 ```
-
-## Requirements
-
-Json Editor with CDN:
-
-```
-<script src="https://cdn.jsdelivr.net/npm/@json-editor/json-editor@latest/dist/jsoneditor.min.js"></script>
-```
-
-Visit [json-editor documentation](https://github.com/json-editor/json-editor) for newest doumentation on the package.
 
 ## Usage
 
