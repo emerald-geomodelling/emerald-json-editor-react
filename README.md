@@ -8,22 +8,65 @@ Wrapper around [json-editor](https://github.com/json-editor/json-editor) and rea
 npm install emerald-json-editor-react
 ```
 
-## Usage
+## Getting Started
 
-Example project: https://github.com/emerald-geomodelling/emerald-json-editor-react-example
+### Here is a full [Example Project](https://github.com/emerald-geomodelling/emerald-json-editor-react-example)
 
-### Initialize
 
 ```javascript
-import {
-  JsonEditorWrapper,
-  registerJsonEditorField,
-} from "emerald-json-editor-react";
+import React, { useState } from "react";
+import { JsonEditorWrapper } from "emerald-json-editor-react";
+import schema from "schema.json";
+
+const JsonForm = () => {
+  const [data, setData] = useState(undefined);
+
+  return (
+    <JsonEditorWrapper
+      schema={schema}
+      data={data}
+      setData={setData}
+    />
+  );
+};
 ```
 
-### Optional
 
-The importFile prop is an optional function for file upload handling. This is an example of the function using axios:
+## API
+
+### Custom fields
+
+A custonm field is a React component that is responsible for rendering
+the input for a particular fragment of the JSON document identified by
+matching against the schema (in this case, string properties with a
+format of `x-fruit`). You can invent/add extra schema properties for
+this purpose, you don't have to reuse the existing ones (like
+`format`) as done here. Be careful when registering multiple custom
+fields that multiple ones can't match on the same schema; the order
+fields are tried in is not well defined.
+
+```javascript
+import { registerJsonEditorField } from "emerald-json-editor-react";
+
+const FruitSelector = ({ value, setValue, schema, context }) => {
+  return (<div>
+    <div><a onClick={() => setValue('Banana'))>{value === "Banana" ? "*" : "-"} Banana</a></div>
+    <div><a onClick={() => setValue('Apple'))>{value === "Apple" ? "*" : "-"} Apple</a></div>
+    <div><a onClick={() => setValue('Orange'))>{value === "Orange" ? "*" : "-"} Orange</a></div>
+  </div>);
+};
+
+registerJsonEditorField(
+  (schema) => schema.type === "string" && schema["format"] === "x-fruit",
+  FruitSelector
+);
+```
+
+### File uploads
+
+The `importFile` prop of `<JsonEditorWrapper/>` is an optional
+function for file upload handling. This is an example of the function
+using axios:
 
 ```javascript
 export const importFile = (file) => {
@@ -38,7 +81,13 @@ export const importFile = (file) => {
 };
 ```
 
-The onValidationStatusChange prop is an optional function that is used to update local states, for example:
+The importFile function should return an object (inside a promise)
+with a `.data.file` property containing the URL to the uploaded file.
+
+
+### Validation
+
+The `onValidationStatusChange` prop is an optional function that is used to update a local state based on form validation, for example:
 
 ```javascript
 const [isDataValid, setIsDataValid] = useState(false);
