@@ -2,6 +2,8 @@
 
 Wrapper around [json-editor](https://github.com/json-editor/json-editor) and react. NB! Does currently not work with next.js projects.
 
+![Screenshot](screenshot.png)
+
 ## Install
 
 ```
